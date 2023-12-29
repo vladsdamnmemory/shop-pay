@@ -1,0 +1,36 @@
+<div class="product-list">
+  <!-- Note: Responsive layout without media queries :) -->
+  <ng-container *ngFor="let product of (products$ | async)">
+    <!-- Todo: Display only after image has been downloaded -->
+    <!-- Todo: Safari img transition bug -->
+    <app-product-item class="fadein" [product]="product" [appHighlight]="product.price"></app-product-item>
+  </ng-container>
+</div>
+
+<div class="flex justify-content-center p-4" *ngIf="!(products$ | async)">
+  <i class="pi pi-spin pi-spinner" style="font-size: 3rem"></i>
+</div>
+
+
+<aside class="filters-block" [class.filters-block--opened]="filtersOpened">
+
+  <section>
+    <h5>Min price ($)</h5>
+    <div class="flex mb-2 align-items-center">
+      <input class="mr-2" type="number" [(ngModel)]="priceFilter" (ngModelChange)="priceChanged($event)">
+      <i class="pi pi-dollar" style="font-size: 2rem"></i>
+    </div>
+  </section>
+
+  <section>
+    <button (click)="clearFilters()">Clear</button>
+  </section>
+
+  <div class="filter-icon-wrapper" (click)="filtersOpened = !filtersOpened">
+    <span>FILTERS</span><i class="pi" [ngClass]="filtersOpened ? 'pi-times' : 'pi-filter'"></i>
+  </div>
+</aside>
+
+<div class="error flex justify-content-center" *ngIf="error">
+  {{ error }}
+</div>

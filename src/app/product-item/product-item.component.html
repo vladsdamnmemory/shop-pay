@@ -1,0 +1,9 @@
+<div class="image-container"><img [src]="product?.image" alt="product_image"></div>
+<div class="product-desc">
+  <h4 class="product-h">{{ product?.title | uppercase }}</h4>
+  <p class="product-brief-info">{{ product?.description + '' | truncate:250 | titlecase }}</p>
+  <p class="product-price flex align-items-center py-2">
+    <span>{{ product?.price }}</span>
+    <i class="pi pi-dollar" style="font-size: 2rem"></i>
+  </p>
+</div>

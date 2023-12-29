@@ -1,0 +1,37 @@
+:host {
+  box-shadow: 0 0 12px #cfcfcf;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: url("/assets/img/shop-pay.svg") 12px center no-repeat white;
+  background-size: 9em;
+  padding: 8px 12px;
+
+  .main-menu {
+    padding-left: 11em;
+    list-style: none;
+
+
+    > a {
+      opacity: .9;
+      margin-right: 12px;
+      font-size: 16px;
+      text-decoration: none;
+      color: var(--light-black);
+      transition: .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        color: var(--blue);
+      }
+    }
+  }
+}
