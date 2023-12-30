@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  padding: 12px;
+  background: white;
+
+  label {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+}

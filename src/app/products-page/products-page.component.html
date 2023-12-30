@@ -1,3 +1,8 @@
+<div class="button-row mb-2 flex justify-content-end">
+  <button (click)="openFormDialog()" mat-raised-button color="primary">Add Product <i class="pi pi-plus ml-1"></i>
+  </button>
+</div>
+
 <div class="product-list">
   <!-- Note: Responsive layout without media queries :) -->
   <ng-container *ngFor="let product of (products$ | async)">

@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  padding: 12px;
+  align-items: flex-end;
+  flex-direction: column;
+  z-index: 9999999;
+
+  .notification {
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    max-width: 400px;
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+    color: white;
+
+    &.success {
+      background-color: var(--blue);
+    }
+
+    &.error {
+      background-color: #e74343;
+    }
+
+    &.warning {
+      background-color: #fae060;
+    }
+  }
+}

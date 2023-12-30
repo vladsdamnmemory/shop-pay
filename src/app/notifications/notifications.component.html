@@ -1,0 +1,3 @@
+<div class="notification" *ngFor="let notification of notes" [ngClass]="notification.type" @customFadeAnimation>
+  <div>{{ notification.message }}</div>
+</div>

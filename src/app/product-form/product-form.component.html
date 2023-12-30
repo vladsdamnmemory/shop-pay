@@ -1,0 +1,36 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+
+  <h2>Add new product</h2>
+
+  <div class="mb-2">
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div class="mb-2">
+    <label for="price">Price: </label>
+    <input id="price" type="number" formControlName="price">
+  </div>
+
+  <div class="mb-2">
+    <label for="image">Image: </label>
+    <input id="image" type="file" accept="image/*" (change)="onFileChange($event)">
+  </div>
+
+
+  <div class="mt-5">
+    <ng-container *ngIf="!isLoading() else loader">
+      <button mat-raised-button color="accent" type="submit" style="width: 100%"
+              [disabled]="formGroup.invalid || formGroup.pristine">
+        Submit
+      </button>
+    </ng-container>
+  </div>
+
+</form>
+
+<ng-template #loader>
+  <div class="flex justify-content-center align-items-center">
+    <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+  </div>
+</ng-template>

@@ -7,7 +7,6 @@ import {UserType} from "../../types/user.type";
 @Injectable()
 export class MockHttpServiceService extends BaseComponent {
 
-
   constructor(
     @Inject('jsonplaceholder_API') private url: string,
     private http: HttpClient
@@ -15,7 +14,6 @@ export class MockHttpServiceService extends BaseComponent {
     super();
 
   }
-
 
   public getUsers(): Observable<UserType[]> {
     return this.http.get<UserType[]>(`${this.url}/users`).pipe(take(1));
