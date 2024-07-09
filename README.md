@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Remarks
 
-The project has been built for 10 hours and includes some extra features. Data is being saved on service level and exists while the server keeps existing.
+The project has been built for 10 hours and includes some extra features. Data is being saved on service level.
 
 *When uploading an image, try to hold back from adding a heavy one. `SVG` is a perfect fit for the current API in use.*
 
